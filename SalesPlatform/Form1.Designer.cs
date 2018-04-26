@@ -31,7 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConcerns = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.chckPaid = new System.Windows.Forms.CheckBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -47,17 +47,17 @@
             this.cmbRust = new System.Windows.Forms.ComboBox();
             this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.cmbPellets = new System.Windows.Forms.ComboBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chckRust = new System.Windows.Forms.CheckBox();
+            this.chckCourse = new System.Windows.Forms.CheckBox();
+            this.chckPellets = new System.Windows.Forms.CheckBox();
             this.txtSellerLast = new System.Windows.Forms.TextBox();
             this.txtSellerFirst = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnResubmit = new System.Windows.Forms.Button();
             this.txtConcers1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -102,7 +102,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.btnSubmit);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtConcerns);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.chckPaid);
             this.tabPage1.Controls.Add(this.txtPhone);
@@ -118,9 +118,9 @@
             this.tabPage1.Controls.Add(this.cmbRust);
             this.tabPage1.Controls.Add(this.cmbCourse);
             this.tabPage1.Controls.Add(this.cmbPellets);
-            this.tabPage1.Controls.Add(this.checkBox3);
-            this.tabPage1.Controls.Add(this.checkBox2);
-            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.chckRust);
+            this.tabPage1.Controls.Add(this.chckCourse);
+            this.tabPage1.Controls.Add(this.chckPellets);
             this.tabPage1.Controls.Add(this.txtSellerLast);
             this.tabPage1.Controls.Add(this.txtSellerFirst);
             this.tabPage1.Controls.Add(this.label2);
@@ -143,13 +143,13 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // textBox1
+            // txtConcerns
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 312);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(688, 66);
-            this.textBox1.TabIndex = 38;
+            this.txtConcerns.Location = new System.Drawing.Point(9, 312);
+            this.txtConcerns.Multiline = true;
+            this.txtConcerns.Name = "txtConcerns";
+            this.txtConcerns.Size = new System.Drawing.Size(688, 66);
+            this.txtConcerns.TabIndex = 38;
             // 
             // label8
             // 
@@ -314,38 +314,38 @@
             this.cmbPellets.Size = new System.Drawing.Size(74, 21);
             this.cmbPellets.TabIndex = 23;
             // 
-            // checkBox3
+            // chckRust
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(272, 238);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(92, 17);
-            this.checkBox3.TabIndex = 22;
-            this.checkBox3.Text = "Rust Buster";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chckRust.AutoSize = true;
+            this.chckRust.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckRust.Location = new System.Drawing.Point(272, 238);
+            this.chckRust.Name = "chckRust";
+            this.chckRust.Size = new System.Drawing.Size(92, 17);
+            this.chckRust.TabIndex = 22;
+            this.chckRust.Text = "Rust Buster";
+            this.chckRust.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chckCourse
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(272, 205);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(65, 17);
-            this.checkBox2.TabIndex = 21;
-            this.checkBox2.Text = "Course";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chckCourse.AutoSize = true;
+            this.chckCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckCourse.Location = new System.Drawing.Point(272, 205);
+            this.chckCourse.Name = "chckCourse";
+            this.chckCourse.Size = new System.Drawing.Size(65, 17);
+            this.chckCourse.TabIndex = 21;
+            this.chckCourse.Text = "Course";
+            this.chckCourse.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chckPellets
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(272, 169);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(64, 17);
-            this.checkBox1.TabIndex = 20;
-            this.checkBox1.Text = "Pellets";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chckPellets.AutoSize = true;
+            this.chckPellets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckPellets.Location = new System.Drawing.Point(272, 169);
+            this.chckPellets.Name = "chckPellets";
+            this.chckPellets.Size = new System.Drawing.Size(64, 17);
+            this.chckPellets.TabIndex = 20;
+            this.chckPellets.Text = "Pellets";
+            this.chckPellets.UseVisualStyleBackColor = true;
             // 
             // txtSellerLast
             // 
@@ -393,6 +393,23 @@
             this.tabPage2.Text = "Sales List";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(6, 371);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(696, 45);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "Edit Sale";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(705, 362);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.btnResubmit);
@@ -426,23 +443,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Edit Sale";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(705, 362);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(6, 371);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(696, 45);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Edit Sale";
-            this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnResubmit
             // 
@@ -722,9 +722,9 @@
         private System.Windows.Forms.ComboBox cmbRust;
         private System.Windows.Forms.ComboBox cmbCourse;
         private System.Windows.Forms.ComboBox cmbPellets;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chckRust;
+        private System.Windows.Forms.CheckBox chckCourse;
+        private System.Windows.Forms.CheckBox chckPellets;
         private System.Windows.Forms.TextBox txtSellerLast;
         private System.Windows.Forms.TextBox txtSellerFirst;
         private System.Windows.Forms.Label label2;
@@ -735,7 +735,7 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtConcerns;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox chckPaid;
         private System.Windows.Forms.TabPage tabPage3;

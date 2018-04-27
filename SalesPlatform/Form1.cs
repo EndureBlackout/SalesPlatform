@@ -20,8 +20,7 @@ namespace SalesPlatform
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            DateTime time = DateTime.Now;
-
+            String time = DateTime.Now.ToString("yyy-MM-dd");
             String sFirst = txtSellerFirst.Text;
             String sLast = txtSellerLast.Text;
             String bFirst = txtBuyerFirst.Text;
@@ -42,17 +41,17 @@ namespace SalesPlatform
             int numRust = 0;
 
 
-            if (!cmbPellets.Equals(""))
+            if (cmbPellets.SelectedItem != null)
             {
                 numPellets = int.Parse(cmbPellets.Text);
             }
 
-            if (!cmbCourse.Equals(""))
+            if (cmbCourse.SelectedItem != null)
             {
                 numCourse = int.Parse(cmbCourse.Text);
             }
 
-            if (!cmbRust.Equals(""))
+            if (cmbRust.SelectedItem != null)
             {
                 numRust = int.Parse(cmbRust.Text);
             }

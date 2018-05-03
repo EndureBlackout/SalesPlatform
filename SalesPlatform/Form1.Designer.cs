@@ -55,8 +55,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstSales = new System.Windows.Forms.ListView();
+            this.clmID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmBuyer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmSeller = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmPellets = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmCourse = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmRust = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmPaid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnResubmit = new System.Windows.Forms.Button();
             this.txtConcers1 = new System.Windows.Forms.TextBox();
@@ -68,20 +78,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtAddress1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtBuyerLast1 = new System.Windows.Forms.TextBox();
-            this.txtBuyerFirst1 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.cmbRust1 = new System.Windows.Forms.ComboBox();
             this.cmbCourse1 = new System.Windows.Forms.ComboBox();
             this.cmbPellets1 = new System.Windows.Forms.ComboBox();
             this.chckRust1 = new System.Windows.Forms.CheckBox();
             this.chckCourse1 = new System.Windows.Forms.CheckBox();
             this.chckPellets1 = new System.Windows.Forms.CheckBox();
-            this.txtSellerLast1 = new System.Windows.Forms.TextBox();
-            this.txtSellerFirst1 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -383,8 +385,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnLoad);
             this.tabPage2.Controls.Add(this.btnEdit);
-            this.tabPage2.Controls.Add(this.listView1);
+            this.tabPage2.Controls.Add(this.lstSales);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -393,22 +396,82 @@
             this.tabPage2.Text = "Sales List";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(3, 371);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(327, 45);
+            this.btnLoad.TabIndex = 2;
+            this.btnLoad.Text = "Load All Sales";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(6, 371);
+            this.btnEdit.Location = new System.Drawing.Point(336, 371);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(696, 45);
+            this.btnEdit.Size = new System.Drawing.Size(366, 45);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edit Sale";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // listView1
+            // lstSales
             // 
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(705, 362);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lstSales.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmID,
+            this.clmBuyer,
+            this.clmSeller,
+            this.clmPellets,
+            this.clmCourse,
+            this.clmRust,
+            this.clmAddress,
+            this.clmPhone,
+            this.clmPaid});
+            this.lstSales.Location = new System.Drawing.Point(3, 3);
+            this.lstSales.Name = "lstSales";
+            this.lstSales.Size = new System.Drawing.Size(705, 362);
+            this.lstSales.TabIndex = 0;
+            this.lstSales.UseCompatibleStateImageBehavior = false;
+            this.lstSales.View = System.Windows.Forms.View.Details;
+            // 
+            // clmID
+            // 
+            this.clmID.Text = "ID";
+            // 
+            // clmBuyer
+            // 
+            this.clmBuyer.Text = "Buyer";
+            this.clmBuyer.Width = 138;
+            // 
+            // clmSeller
+            // 
+            this.clmSeller.Text = "Seller";
+            this.clmSeller.Width = 139;
+            // 
+            // clmPellets
+            // 
+            this.clmPellets.Text = "Pellets";
+            // 
+            // clmCourse
+            // 
+            this.clmCourse.Text = "Course";
+            // 
+            // clmRust
+            // 
+            this.clmRust.Text = "Rust";
+            // 
+            // clmAddress
+            // 
+            this.clmAddress.Text = "Address";
+            // 
+            // clmPhone
+            // 
+            this.clmPhone.Text = "Phone";
+            // 
+            // clmPaid
+            // 
+            this.clmPaid.Text = "Paid";
             // 
             // tabPage3
             // 
@@ -422,20 +485,12 @@
             this.tabPage3.Controls.Add(this.label11);
             this.tabPage3.Controls.Add(this.txtAddress1);
             this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.txtBuyerLast1);
-            this.tabPage3.Controls.Add(this.txtBuyerFirst1);
-            this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.cmbRust1);
             this.tabPage3.Controls.Add(this.cmbCourse1);
             this.tabPage3.Controls.Add(this.cmbPellets1);
             this.tabPage3.Controls.Add(this.chckRust1);
             this.tabPage3.Controls.Add(this.chckCourse1);
             this.tabPage3.Controls.Add(this.chckPellets1);
-            this.tabPage3.Controls.Add(this.txtSellerLast1);
-            this.tabPage3.Controls.Add(this.txtSellerFirst1);
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -455,17 +510,17 @@
             // 
             // txtConcers1
             // 
-            this.txtConcers1.Location = new System.Drawing.Point(13, 309);
+            this.txtConcers1.Location = new System.Drawing.Point(13, 235);
             this.txtConcers1.Multiline = true;
             this.txtConcers1.Name = "txtConcers1";
-            this.txtConcers1.Size = new System.Drawing.Size(688, 66);
+            this.txtConcers1.Size = new System.Drawing.Size(688, 140);
             this.txtConcers1.TabIndex = 62;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(10, 290);
+            this.label9.Location = new System.Drawing.Point(10, 216);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(195, 16);
             this.label9.TabIndex = 61;
@@ -475,7 +530,7 @@
             // 
             this.chckPaid1.AutoSize = true;
             this.chckPaid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckPaid1.Location = new System.Drawing.Point(310, 269);
+            this.chckPaid1.Location = new System.Drawing.Point(301, 198);
             this.chckPaid1.Name = "chckPaid1";
             this.chckPaid1.Size = new System.Drawing.Size(77, 17);
             this.chckPaid1.TabIndex = 60;
@@ -484,7 +539,7 @@
             // 
             // txtPhn1
             // 
-            this.txtPhn1.Location = new System.Drawing.Point(419, 126);
+            this.txtPhn1.Location = new System.Drawing.Point(408, 48);
             this.txtPhn1.Name = "txtPhn1";
             this.txtPhn1.Size = new System.Drawing.Size(168, 20);
             this.txtPhn1.TabIndex = 59;
@@ -493,7 +548,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(366, 126);
+            this.label10.Location = new System.Drawing.Point(355, 48);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 16);
             this.label10.TabIndex = 58;
@@ -501,7 +556,7 @@
             // 
             // txtEmail1
             // 
-            this.txtEmail1.Location = new System.Drawing.Point(199, 123);
+            this.txtEmail1.Location = new System.Drawing.Point(188, 45);
             this.txtEmail1.Name = "txtEmail1";
             this.txtEmail1.Size = new System.Drawing.Size(154, 20);
             this.txtEmail1.TabIndex = 57;
@@ -510,7 +565,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(79, 123);
+            this.label11.Location = new System.Drawing.Point(68, 45);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(95, 16);
             this.label11.TabIndex = 56;
@@ -518,7 +573,7 @@
             // 
             // txtAddress1
             // 
-            this.txtAddress1.Location = new System.Drawing.Point(199, 92);
+            this.txtAddress1.Location = new System.Drawing.Point(188, 14);
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Size = new System.Drawing.Size(419, 20);
             this.txtAddress1.TabIndex = 55;
@@ -527,45 +582,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(79, 92);
+            this.label12.Location = new System.Drawing.Point(68, 14);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(114, 16);
             this.label12.TabIndex = 54;
             this.label12.Text = "Buyer Address:";
-            // 
-            // txtBuyerLast1
-            // 
-            this.txtBuyerLast1.Location = new System.Drawing.Point(502, 45);
-            this.txtBuyerLast1.Name = "txtBuyerLast1";
-            this.txtBuyerLast1.Size = new System.Drawing.Size(198, 20);
-            this.txtBuyerLast1.TabIndex = 53;
-            // 
-            // txtBuyerFirst1
-            // 
-            this.txtBuyerFirst1.Location = new System.Drawing.Point(159, 46);
-            this.txtBuyerFirst1.Name = "txtBuyerFirst1";
-            this.txtBuyerFirst1.Size = new System.Drawing.Size(182, 20);
-            this.txtBuyerFirst1.TabIndex = 52;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(366, 46);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 16);
-            this.label13.TabIndex = 51;
-            this.label13.Text = "Buyer Last Name:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(22, 46);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 16);
-            this.label14.TabIndex = 50;
-            this.label14.Text = "Buyer First Name:";
             // 
             // cmbRust1
             // 
@@ -581,7 +602,7 @@
             "8",
             "9",
             "10"});
-            this.cmbRust1.Location = new System.Drawing.Point(374, 233);
+            this.cmbRust1.Location = new System.Drawing.Point(365, 162);
             this.cmbRust1.Name = "cmbRust1";
             this.cmbRust1.Size = new System.Drawing.Size(81, 21);
             this.cmbRust1.TabIndex = 49;
@@ -600,7 +621,7 @@
             "8",
             "9",
             "10"});
-            this.cmbCourse1.Location = new System.Drawing.Point(346, 202);
+            this.cmbCourse1.Location = new System.Drawing.Point(337, 131);
             this.cmbCourse1.Name = "cmbCourse1";
             this.cmbCourse1.Size = new System.Drawing.Size(74, 21);
             this.cmbCourse1.TabIndex = 48;
@@ -619,7 +640,7 @@
             "8",
             "9",
             "10"});
-            this.cmbPellets1.Location = new System.Drawing.Point(346, 164);
+            this.cmbPellets1.Location = new System.Drawing.Point(337, 93);
             this.cmbPellets1.Name = "cmbPellets1";
             this.cmbPellets1.Size = new System.Drawing.Size(74, 21);
             this.cmbPellets1.TabIndex = 47;
@@ -628,7 +649,7 @@
             // 
             this.chckRust1.AutoSize = true;
             this.chckRust1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckRust1.Location = new System.Drawing.Point(276, 235);
+            this.chckRust1.Location = new System.Drawing.Point(267, 164);
             this.chckRust1.Name = "chckRust1";
             this.chckRust1.Size = new System.Drawing.Size(92, 17);
             this.chckRust1.TabIndex = 46;
@@ -639,7 +660,7 @@
             // 
             this.chckCourse1.AutoSize = true;
             this.chckCourse1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckCourse1.Location = new System.Drawing.Point(276, 202);
+            this.chckCourse1.Location = new System.Drawing.Point(267, 131);
             this.chckCourse1.Name = "chckCourse1";
             this.chckCourse1.Size = new System.Drawing.Size(65, 17);
             this.chckCourse1.TabIndex = 45;
@@ -650,46 +671,12 @@
             // 
             this.chckPellets1.AutoSize = true;
             this.chckPellets1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckPellets1.Location = new System.Drawing.Point(276, 166);
+            this.chckPellets1.Location = new System.Drawing.Point(267, 95);
             this.chckPellets1.Name = "chckPellets1";
             this.chckPellets1.Size = new System.Drawing.Size(64, 17);
             this.chckPellets1.TabIndex = 44;
             this.chckPellets1.Text = "Pellets";
             this.chckPellets1.UseVisualStyleBackColor = true;
-            // 
-            // txtSellerLast1
-            // 
-            this.txtSellerLast1.Location = new System.Drawing.Point(503, 6);
-            this.txtSellerLast1.Name = "txtSellerLast1";
-            this.txtSellerLast1.Size = new System.Drawing.Size(198, 20);
-            this.txtSellerLast1.TabIndex = 43;
-            // 
-            // txtSellerFirst1
-            // 
-            this.txtSellerFirst1.Location = new System.Drawing.Point(160, 6);
-            this.txtSellerFirst1.Name = "txtSellerFirst1";
-            this.txtSellerFirst1.Size = new System.Drawing.Size(181, 20);
-            this.txtSellerFirst1.TabIndex = 42;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(366, 7);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(131, 16);
-            this.label15.TabIndex = 41;
-            this.label15.Text = "Seller Last Name:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(22, 7);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(132, 16);
-            this.label16.TabIndex = 40;
-            this.label16.Text = "Seller First Name:";
             // 
             // Form1
             // 
@@ -740,7 +727,7 @@
         private System.Windows.Forms.CheckBox chckPaid;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstSales;
         private System.Windows.Forms.Button btnResubmit;
         private System.Windows.Forms.TextBox txtConcers1;
         private System.Windows.Forms.Label label9;
@@ -751,20 +738,22 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtAddress1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtBuyerLast1;
-        private System.Windows.Forms.TextBox txtBuyerFirst1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbRust1;
         private System.Windows.Forms.ComboBox cmbCourse1;
         private System.Windows.Forms.ComboBox cmbPellets1;
         private System.Windows.Forms.CheckBox chckRust1;
         private System.Windows.Forms.CheckBox chckCourse1;
         private System.Windows.Forms.CheckBox chckPellets1;
-        private System.Windows.Forms.TextBox txtSellerLast1;
-        private System.Windows.Forms.TextBox txtSellerFirst1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.ColumnHeader clmBuyer;
+        private System.Windows.Forms.ColumnHeader clmSeller;
+        private System.Windows.Forms.ColumnHeader clmPellets;
+        private System.Windows.Forms.ColumnHeader clmCourse;
+        private System.Windows.Forms.ColumnHeader clmRust;
+        private System.Windows.Forms.ColumnHeader clmAddress;
+        private System.Windows.Forms.ColumnHeader clmPhone;
+        private System.Windows.Forms.ColumnHeader clmPaid;
+        private System.Windows.Forms.ColumnHeader clmID;
     }
 }
 

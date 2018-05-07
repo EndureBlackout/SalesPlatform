@@ -84,6 +84,7 @@
             this.chckRust1 = new System.Windows.Forms.CheckBox();
             this.chckCourse1 = new System.Windows.Forms.CheckBox();
             this.chckPellets1 = new System.Windows.Forms.CheckBox();
+            this.clmTotalDue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -98,7 +99,7 @@
             this.tabControl1.Location = new System.Drawing.Point(2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(719, 448);
+            this.tabControl1.Size = new System.Drawing.Size(738, 448);
             this.tabControl1.TabIndex = 16;
             // 
             // tabPage1
@@ -130,9 +131,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(711, 422);
+            this.tabPage1.Size = new System.Drawing.Size(730, 422);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Sales Submition";
+            this.tabPage1.Text = "Sales Submission";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnSubmit
@@ -391,7 +392,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(711, 422);
+            this.tabPage2.Size = new System.Drawing.Size(730, 422);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sales List";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -425,12 +426,13 @@
             this.clmPellets,
             this.clmCourse,
             this.clmRust,
+            this.clmTotalDue,
             this.clmAddress,
             this.clmPhone,
             this.clmPaid});
-            this.lstSales.Location = new System.Drawing.Point(3, 3);
+            this.lstSales.Location = new System.Drawing.Point(3, 0);
             this.lstSales.Name = "lstSales";
-            this.lstSales.Size = new System.Drawing.Size(705, 362);
+            this.lstSales.Size = new System.Drawing.Size(731, 362);
             this.lstSales.TabIndex = 0;
             this.lstSales.UseCompatibleStateImageBehavior = false;
             this.lstSales.View = System.Windows.Forms.View.Details;
@@ -468,6 +470,7 @@
             // clmPhone
             // 
             this.clmPhone.Text = "Phone";
+            this.clmPhone.Width = 54;
             // 
             // clmPaid
             // 
@@ -494,7 +497,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(711, 422);
+            this.tabPage3.Size = new System.Drawing.Size(730, 422);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Edit Sale";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -507,6 +510,7 @@
             this.btnResubmit.TabIndex = 63;
             this.btnResubmit.Text = "Re-Submit";
             this.btnResubmit.UseVisualStyleBackColor = true;
+            this.btnResubmit.Click += new System.EventHandler(this.btnResubmit_Click);
             // 
             // txtConcers1
             // 
@@ -678,11 +682,16 @@
             this.chckPellets1.Text = "Pellets";
             this.chckPellets1.UseVisualStyleBackColor = true;
             // 
+            // clmTotalDue
+            // 
+            this.clmTotalDue.Text = "Total Due";
+            this.clmTotalDue.Width = 68;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 453);
+            this.ClientSize = new System.Drawing.Size(741, 453);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Salt Sales";
@@ -754,6 +763,7 @@
         private System.Windows.Forms.ColumnHeader clmPhone;
         private System.Windows.Forms.ColumnHeader clmPaid;
         private System.Windows.Forms.ColumnHeader clmID;
+        private System.Windows.Forms.ColumnHeader clmTotalDue;
     }
 }
 

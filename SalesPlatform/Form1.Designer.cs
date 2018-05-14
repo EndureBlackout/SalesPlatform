@@ -64,6 +64,7 @@
             this.clmPellets = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmCourse = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmRust = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmTotalDue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmPaid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -84,7 +85,6 @@
             this.chckRust1 = new System.Windows.Forms.CheckBox();
             this.chckCourse1 = new System.Windows.Forms.CheckBox();
             this.chckPellets1 = new System.Windows.Forms.CheckBox();
-            this.clmTotalDue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -436,10 +436,12 @@
             this.lstSales.TabIndex = 0;
             this.lstSales.UseCompatibleStateImageBehavior = false;
             this.lstSales.View = System.Windows.Forms.View.Details;
+            this.lstSales.SelectedIndexChanged += new System.EventHandler(this.lstSales_SelectedIndexChanged);
             // 
             // clmID
             // 
             this.clmID.Text = "ID";
+            this.clmID.Width = 30;
             // 
             // clmBuyer
             // 
@@ -462,6 +464,11 @@
             // clmRust
             // 
             this.clmRust.Text = "Rust";
+            // 
+            // clmTotalDue
+            // 
+            this.clmTotalDue.Text = "Total Due";
+            this.clmTotalDue.Width = 68;
             // 
             // clmAddress
             // 
@@ -681,11 +688,6 @@
             this.chckPellets1.TabIndex = 44;
             this.chckPellets1.Text = "Pellets";
             this.chckPellets1.UseVisualStyleBackColor = true;
-            // 
-            // clmTotalDue
-            // 
-            this.clmTotalDue.Text = "Total Due";
-            this.clmTotalDue.Width = 68;
             // 
             // Form1
             // 

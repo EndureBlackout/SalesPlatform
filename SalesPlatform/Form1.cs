@@ -185,7 +185,6 @@ namespace SalesPlatform
                 {
                     course = reader["course"].ToString();
                     chckCourse1.Checked = true;
-                    cmbCourse1.Items.Add(course);
                     cmbCourse1.SelectedIndex = Int32.Parse(reader["course"].ToString()) - 1;
                 }
 
@@ -193,7 +192,6 @@ namespace SalesPlatform
                 {
                     rust = reader["rust"].ToString();
                     chckRust1.Checked = true;
-                    cmbRust1.Items.Add(rust);
                     cmbRust1.SelectedIndex = Int32.Parse(reader["rust"].ToString()) - 1;
                 }
 
@@ -291,6 +289,11 @@ namespace SalesPlatform
             cmbPellets1.Text = "";
             cmbCourse1.Text = "";
             cmbRust1.Text = "";
+        }
+
+        private void lstSales_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
